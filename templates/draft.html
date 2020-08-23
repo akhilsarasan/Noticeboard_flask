@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>here are the saved messges</h1
+  div class="content">
+    <h1>MESSAGES</h1>
+
+    <table border="1.0">
+      <tr>
+        <th>MESSAGES</th>
+        <th>added</th>
+        <th>actions</th>
+      </tr>
+      {% for mes in messages %}
+      <tr>
+        <td>{{mes.content}}</td>
+        <td>{{mes.date_created.date()}}</td>
+        <td>
+  <a href="/update/{{mes.mid}}">publish now</a>
+  <br>
+
+        </td>
+
+      </tr>
+      {%endfor%}
+
+    </table>
+{% endblock %}
